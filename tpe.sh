@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Chequea si se ingreso un solo parametro
+#Manejo de errores
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <prefix>"
     echo "Example: $0 \"Champions\""
     exit 1
 fi
 
-# Chequea si se seteo bien la API-KEY
+#Manejo de errores
 if [ -z "$SPORTRADAR_API" ]; then
     echo "Error: SPORTRADAR_API environment variable is not set"
     echo "Please set it first:"
@@ -16,7 +16,7 @@ if [ -z "$SPORTRADAR_API" ]; then
 fi
 
 
-#Chequea que este instalado en la misma carpeta Apache
+#Manejo de errores
 if ! command -v fop >/dev/null 2>&1; then
   echo '<handball_data>
         <error> Apache not installed </error>
@@ -27,6 +27,9 @@ fi
 echo "Input and API-KEY checked"
 
 PREFIX="$1"
+
+
+#Manejo de errores
 
 if [ "$PREFIX" == "" ]; then
   echo '<handball_data>
@@ -124,7 +127,7 @@ java -jar ../saxon9he.jar \
 
 fop -fo handball_page.fo -pdf handball_report.pdf 2>/dev/null
 
-
+#Manejo de errores
 if [ ! -s handball_report.pdf ]; then
     echo "Error: Failed to generate PDF. Check data/fop.log for details"
     echo "FO file preview:"
