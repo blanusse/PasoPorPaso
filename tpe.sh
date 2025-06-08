@@ -39,6 +39,8 @@ if [ "$PREFIX" == "" ]; then
 
 fi
 
+SAXON_PATH=$(find ~ -name "saxon*.jar" 2>/dev/null | head -n 1)
+
 
 # Create data directory if it doesn't exist
 mkdir -p data
@@ -49,8 +51,9 @@ API_BASE="https://api.sportradar.com/handball/trial/v2/en/seasons.xml"
 # Get seasons list
 curl -s -X GET ${API_BASE} --header 'accept:application/json' --header "x-api-key: ${SPORTRADAR_API}" -o data/seasons_list.xml
 
-java -cp ../saxon9he.jar net.sf.saxon.Transform -s:data/seasons_list.xml -xsl:remove_namespace.xsl -o:data/seasons_list.xml
 
+java -cp ${SAXON_PATH} net.sf.saxon.Transform -s:data/seasons_list.xml -xsl:remove_namespace.xsl -o:data/seasons_list.xml
+#
 #Chequea si el archivo seasons_list.xml esta vacio o no se creo
 if [ ! -s data/seasons_list.xml ]; then
     echo "Error: Failed to fetch seasons list"
@@ -59,8 +62,7 @@ fi
 
 
 
-#
-SEASON_ID2=$(java -cp ../saxon9he.jar net.sf.saxon.Query \
+SEASON_ID2=$(java -cp ${SAXON_PATH} net.sf.saxon.Query \
 -q:extract_season_id.xq \
   -s:data/seasons_list.xml \
   prefix="$PREFIX"\
@@ -85,7 +87,7 @@ echo "Season id found: ${SEASON_ID}"
 curl -s -X GET https://api.sportradar.com/handball/trial/v2/en/seasons/${SEASON_ID}/standings.xml \
 --header 'accept: application/json' --header "x-api-key: ${SPORTRADAR_API}" -o \
 data/season_standings.xml
-java -cp ../saxon9he.jar net.sf.saxon.Transform -s:data/season_standings.xml -xsl:remove_namespace.xsl -o:data/season_standings.xml
+java -cp ${SAXON_PATH} net.sf.saxon.Transform -s:data/season_standings.xml -xsl:remove_namespace.xsl -o:data/season_standings.xml
 
 if [ ! -s data/season_standings.xml ]; then
     echo "Error: Failed to fetch season standings"
@@ -95,7 +97,7 @@ fi
  curl -s -X GET https://api.sportradar.com/handball/trial/v2/en/seasons/${SEASON_ID}/info.xml \
  --header 'accept: application/json' --header "x-api-key: ${SPORTRADAR_API}" -o \
  data/season_info.xml
-java -cp ../saxon9he.jar net.sf.saxon.Transform -s:data/season_info.xml -xsl:remove_namespace.xsl -o:data/season_info.xml
+java -cp ${SAXON_PATH} net.sf.saxon.Transform -s:data/season_info.xml -xsl:remove_namespace.xsl -o:data/season_info.xml
 
 if [ ! -s data/season_info.xml ]; then
     echo "Error: Failed to fetch season info"
@@ -107,12 +109,12 @@ echo "season_standings.xml and season_info.xml fetched"
 
 #############################################################################################
 
-HANDBALL_DATA=$(java -cp ../saxon9he.jar net.sf.saxon.Query \
+HANDBALL_DATA=$(java -cp ${SAXON_PATH} net.sf.saxon.Query \
   -q:extract_handball_data.xq \
   )
 
 echo "$HANDBALL_DATA" > handball_data.xml
-java -cp ../saxon9he.jar net.sf.saxon.Transform -s:handball_data.xml -xsl:remove_namespace.xsl -o:handball_data.xml
+java -cp ${SAXON_PATH} net.sf.saxon.Transform -s:handball_data.xml -xsl:remove_namespace.xsl -o:handball_data.xml
 
 if [ ! -s handball_data.xml ]; then
     echo "Error: Failed to create handball data"
@@ -120,7 +122,7 @@ if [ ! -s handball_data.xml ]; then
 fi
 
 
-java -jar ../saxon9he.jar \
+java -jar ${SAXON_PATH}\
   -s:handball_data.xml \
   -xsl:generate_fo.xsl \
   -o:handball_page.fo
