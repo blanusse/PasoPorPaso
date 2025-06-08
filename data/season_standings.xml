@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<season_standings generated_at="2025-06-08T21:17:24+00:00"
+                  schemaLocation="http://schemas.sportradar.com/sportsapi/handball/v2 https://schemas.sportradar.com/sportsapi/handball/v2/schemas/season_standings.xsd">
+   <season_standing tie_break_rule="At the end of the group phase, in the event that two (or more) teams have an equal number of points the following rules break the tie:&#xA;1. Head-to-head&#xA;2. Goal difference&#xA;3. Goals scored&#xA;During the group phase, the following tie-breaking procedures are used:&#xA;1. Goal difference&#xA;2. Goals scored"
+                    type="total"
+                    round="5">
+      <groups>
+         <group id="sr:league:21799" name="Group A" live="false" group_name="A">
+            <stage order="1"
+                   type="league"
+                   phase="stage_1"
+                   start_date="2016-08-07"
+                   end_date="2016-08-16"
+                   year="2016"/>
+            <standings>
+               <standing rank="1"
+                         played="5"
+                         win="4"
+                         loss="1"
+                         draw="0"
+                         goals_for="147"
+                         goals_against="134"
+                         goals_diff="13"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5585"
+                              name="Croatia"
+                              country="Croatia"
+                              country_code="HRV"
+                              abbreviation="CRO"
+                              gender="male"/>
+               </standing>
+               <standing rank="2"
+                         played="5"
+                         win="4"
+                         loss="1"
+                         draw="0"
+                         goals_for="152"
+                         goals_against="126"
+                         goals_diff="26"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5587"
+                              name="France"
+                              country="France"
+                              country_code="FRA"
+                              abbreviation="FRA"
+                              gender="male"/>
+               </standing>
+               <standing rank="3"
+                         played="5"
+                         win="3"
+                         loss="2"
+                         draw="0"
+                         goals_for="136"
+                         goals_against="127"
+                         goals_diff="9"
+                         points="6"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5586"
+                              name="Denmark"
+                              country="Denmark"
+                              country_code="DNK"
+                              abbreviation="DEN"
+                              gender="male"/>
+               </standing>
+               <standing rank="4"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="122"
+                         goals_against="127"
+                         goals_diff="-5"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:6944"
+                              name="Qatar"
+                              country="Qatar"
+                              country_code="QAT"
+                              abbreviation="QAT"
+                              gender="male"/>
+               </standing>
+               <standing rank="5"
+                         played="5"
+                         win="1"
+                         loss="4"
+                         draw="0"
+                         goals_for="110"
+                         goals_against="126"
+                         goals_diff="-16"
+                         points="2"
+                         change="0">
+                  <competitor id="sr:competitor:6937"
+                              name="Argentina"
+                              country="Argentina"
+                              country_code="ARG"
+                              abbreviation="ARG"
+                              gender="male"/>
+               </standing>
+               <standing rank="6"
+                         played="5"
+                         win="0"
+                         loss="4"
+                         draw="1"
+                         goals_for="118"
+                         goals_against="145"
+                         goals_diff="-27"
+                         points="1"
+                         change="0">
+                  <competitor id="sr:competitor:6946"
+                              name="Tunisia"
+                              country="Tunisia"
+                              country_code="TUN"
+                              abbreviation="TUN"
+                              gender="male"/>
+               </standing>
+            </standings>
+         </group>
+         <group id="sr:league:21801" name="Group B" live="false" group_name="B">
+            <stage order="1"
+                   type="league"
+                   phase="stage_1"
+                   start_date="2016-08-07"
+                   end_date="2016-08-16"
+                   year="2016"/>
+            <standings>
+               <standing rank="1"
+                         played="5"
+                         win="4"
+                         loss="1"
+                         draw="0"
+                         goals_for="153"
+                         goals_against="141"
+                         goals_diff="12"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5588"
+                              name="Germany"
+                              country="Germany"
+                              country_code="DEU"
+                              abbreviation="GER"
+                              gender="male"/>
+               </standing>
+               <standing rank="2"
+                         played="5"
+                         win="4"
+                         loss="1"
+                         draw="0"
+                         goals_for="137"
+                         goals_against="126"
+                         goals_diff="11"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5597"
+                              name="Slovenia"
+                              country="Slovenia"
+                              country_code="SVN"
+                              abbreviation="SLO"
+                              gender="male"/>
+               </standing>
+               <standing rank="3"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="141"
+                         goals_against="150"
+                         goals_diff="-9"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:6935"
+                              name="Brazil"
+                              country="Brazil"
+                              country_code="BRA"
+                              abbreviation="BRA"
+                              gender="male"/>
+               </standing>
+               <standing rank="4"
+                         played="5"
+                         win="2"
+                         loss="3"
+                         draw="0"
+                         goals_for="139"
+                         goals_against="140"
+                         goals_diff="-1"
+                         points="4"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5592"
+                              name="Poland"
+                              country="Poland"
+                              country_code="POL"
+                              abbreviation="POL"
+                              gender="male"/>
+               </standing>
+               <standing rank="5"
+                         played="5"
+                         win="1"
+                         loss="3"
+                         draw="1"
+                         goals_for="129"
+                         goals_against="143"
+                         goals_diff="-14"
+                         points="3"
+                         change="0">
+                  <competitor id="sr:competitor:6940"
+                              name="Egypt"
+                              country="Egypt"
+                              country_code="EGY"
+                              abbreviation="EGY"
+                              gender="male"/>
+               </standing>
+               <standing rank="6"
+                         played="5"
+                         win="1"
+                         loss="4"
+                         draw="0"
+                         goals_for="132"
+                         goals_against="131"
+                         goals_diff="1"
+                         points="2"
+                         change="0">
+                  <competitor id="sr:competitor:7578"
+                              name="Sweden"
+                              country="Sweden"
+                              country_code="SWE"
+                              abbreviation="SWE"
+                              gender="male"/>
+               </standing>
+            </standings>
+         </group>
+      </groups>
+   </season_standing>
+   <season_standing tie_break_rule="At the end of the group phase, in the event that two (or more) teams have an equal number of points the following rules break the tie:&#xA;1. Head-to-head&#xA;2. Goal difference&#xA;3. Goals scored&#xA;During the group phase, the following tie-breaking procedures are used:&#xA;1. Goal difference&#xA;2. Goals scored"
+                    type="first_half_total"
+                    round="5">
+      <groups>
+         <group id="sr:league:21799" name="Group A" live="false" group_name="A">
+            <stage order="1"
+                   type="league"
+                   phase="stage_1"
+                   start_date="2016-08-07"
+                   end_date="2016-08-16"
+                   year="2016"/>
+            <standings>
+               <standing rank="1"
+                         played="5"
+                         win="4"
+                         loss="1"
+                         draw="0"
+                         goals_for="78"
+                         goals_against="66"
+                         goals_diff="12"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5587"
+                              name="France"
+                              country="France"
+                              country_code="FRA"
+                              abbreviation="FRA"
+                              gender="male"/>
+               </standing>
+               <standing rank="2"
+                         played="5"
+                         win="3"
+                         loss="2"
+                         draw="0"
+                         goals_for="76"
+                         goals_against="64"
+                         goals_diff="12"
+                         points="6"
+                         current_outcome="Playoffs"
+                         change="1">
+                  <competitor id="sr:competitor:5585"
+                              name="Croatia"
+                              country="Croatia"
+                              country_code="HRV"
+                              abbreviation="CRO"
+                              gender="male"/>
+               </standing>
+               <standing rank="3"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="65"
+                         goals_against="59"
+                         goals_diff="6"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="2">
+                  <competitor id="sr:competitor:6944"
+                              name="Qatar"
+                              country="Qatar"
+                              country_code="QAT"
+                              abbreviation="QAT"
+                              gender="male"/>
+               </standing>
+               <standing rank="4"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="60"
+                         goals_against="63"
+                         goals_diff="-3"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="-2">
+                  <competitor id="sr:competitor:6937"
+                              name="Argentina"
+                              country="Argentina"
+                              country_code="ARG"
+                              abbreviation="ARG"
+                              gender="male"/>
+               </standing>
+               <standing rank="5"
+                         played="5"
+                         win="1"
+                         loss="2"
+                         draw="2"
+                         goals_for="69"
+                         goals_against="66"
+                         goals_diff="3"
+                         points="4"
+                         change="-1">
+                  <competitor id="sr:competitor:5586"
+                              name="Denmark"
+                              country="Denmark"
+                              country_code="DNK"
+                              abbreviation="DEN"
+                              gender="male"/>
+               </standing>
+               <standing rank="6"
+                         played="5"
+                         win="1"
+                         loss="4"
+                         draw="0"
+                         goals_for="53"
+                         goals_against="83"
+                         goals_diff="-30"
+                         points="2"
+                         change="0">
+                  <competitor id="sr:competitor:6946"
+                              name="Tunisia"
+                              country="Tunisia"
+                              country_code="TUN"
+                              abbreviation="TUN"
+                              gender="male"/>
+               </standing>
+            </standings>
+         </group>
+         <group id="sr:league:21801" name="Group B" live="false" group_name="B">
+            <stage order="1"
+                   type="league"
+                   phase="stage_1"
+                   start_date="2016-08-07"
+                   end_date="2016-08-16"
+                   year="2016"/>
+            <standings>
+               <standing rank="1"
+                         played="5"
+                         win="3"
+                         loss="0"
+                         draw="2"
+                         goals_for="70"
+                         goals_against="65"
+                         goals_diff="5"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5597"
+                              name="Slovenia"
+                              country="Slovenia"
+                              country_code="SVN"
+                              abbreviation="SLO"
+                              gender="male"/>
+               </standing>
+               <standing rank="2"
+                         played="5"
+                         win="3"
+                         loss="2"
+                         draw="0"
+                         goals_for="76"
+                         goals_against="70"
+                         goals_diff="6"
+                         points="6"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5588"
+                              name="Germany"
+                              country="Germany"
+                              country_code="DEU"
+                              abbreviation="GER"
+                              gender="male"/>
+               </standing>
+               <standing rank="3"
+                         played="5"
+                         win="3"
+                         loss="2"
+                         draw="0"
+                         goals_for="70"
+                         goals_against="66"
+                         goals_diff="4"
+                         points="6"
+                         current_outcome="Playoffs"
+                         change="1">
+                  <competitor id="sr:competitor:7578"
+                              name="Sweden"
+                              country="Sweden"
+                              country_code="SWE"
+                              abbreviation="SWE"
+                              gender="male"/>
+               </standing>
+               <standing rank="4"
+                         played="5"
+                         win="2"
+                         loss="3"
+                         draw="0"
+                         goals_for="69"
+                         goals_against="76"
+                         goals_diff="-7"
+                         points="4"
+                         current_outcome="Playoffs"
+                         change="-1">
+                  <competitor id="sr:competitor:6935"
+                              name="Brazil"
+                              country="Brazil"
+                              country_code="BRA"
+                              abbreviation="BRA"
+                              gender="male"/>
+               </standing>
+               <standing rank="5"
+                         played="5"
+                         win="1"
+                         loss="3"
+                         draw="1"
+                         goals_for="68"
+                         goals_against="68"
+                         goals_diff="0"
+                         points="3"
+                         change="1">
+                  <competitor id="sr:competitor:5592"
+                              name="Poland"
+                              country="Poland"
+                              country_code="POL"
+                              abbreviation="POL"
+                              gender="male"/>
+               </standing>
+               <standing rank="6"
+                         played="5"
+                         win="1"
+                         loss="3"
+                         draw="1"
+                         goals_for="64"
+                         goals_against="72"
+                         goals_diff="-8"
+                         points="3"
+                         change="-1">
+                  <competitor id="sr:competitor:6940"
+                              name="Egypt"
+                              country="Egypt"
+                              country_code="EGY"
+                              abbreviation="EGY"
+                              gender="male"/>
+               </standing>
+            </standings>
+         </group>
+      </groups>
+   </season_standing>
+   <season_standing tie_break_rule="At the end of the group phase, in the event that two (or more) teams have an equal number of points the following rules break the tie:&#xA;1. Head-to-head&#xA;2. Goal difference&#xA;3. Goals scored&#xA;During the group phase, the following tie-breaking procedures are used:&#xA;1. Goal difference&#xA;2. Goals scored"
+                    type="second_half_total"
+                    round="5">
+      <groups>
+         <group id="sr:league:21799" name="Group A" live="false" group_name="A">
+            <stage order="1"
+                   type="league"
+                   phase="stage_1"
+                   start_date="2016-08-07"
+                   end_date="2016-08-16"
+                   year="2016"/>
+            <standings>
+               <standing rank="1"
+                         played="5"
+                         win="4"
+                         loss="1"
+                         draw="0"
+                         goals_for="74"
+                         goals_against="60"
+                         goals_diff="14"
+                         points="8"
+                         current_outcome="Playoffs"
+                         change="1">
+                  <competitor id="sr:competitor:5587"
+                              name="France"
+                              country="France"
+                              country_code="FRA"
+                              abbreviation="FRA"
+                              gender="male"/>
+               </standing>
+               <standing rank="2"
+                         played="5"
+                         win="3"
+                         loss="1"
+                         draw="1"
+                         goals_for="67"
+                         goals_against="61"
+                         goals_diff="6"
+                         points="7"
+                         current_outcome="Playoffs"
+                         change="-1">
+                  <competitor id="sr:competitor:5586"
+                              name="Denmark"
+                              country="Denmark"
+                              country_code="DNK"
+                              abbreviation="DEN"
+                              gender="male"/>
+               </standing>
+               <standing rank="3"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="57"
+                         goals_against="68"
+                         goals_diff="-11"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="2">
+                  <competitor id="sr:competitor:6944"
+                              name="Qatar"
+                              country="Qatar"
+                              country_code="QAT"
+                              abbreviation="QAT"
+                              gender="male"/>
+               </standing>
+               <standing rank="4"
+                         played="5"
+                         win="1"
+                         loss="1"
+                         draw="3"
+                         goals_for="71"
+                         goals_against="70"
+                         goals_diff="1"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="0">
+                  <competitor id="sr:competitor:5585"
+                              name="Croatia"
+                              country="Croatia"
+                              country_code="HRV"
+                              abbreviation="CRO"
+                              gender="male"/>
+               </standing>
+               <standing rank="5"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="65"
+                         goals_against="62"
+                         goals_diff="3"
+                         points="5"
+                         change="-2">
+                  <competitor id="sr:competitor:6946"
+                              name="Tunisia"
+                              country="Tunisia"
+                              country_code="TUN"
+                              abbreviation="TUN"
+                              gender="male"/>
+               </standing>
+               <standing rank="6"
+                         played="5"
+                         win="0"
+                         loss="5"
+                         draw="0"
+                         goals_for="50"
+                         goals_against="63"
+                         goals_diff="-13"
+                         points="0"
+                         change="0">
+                  <competitor id="sr:competitor:6937"
+                              name="Argentina"
+                              country="Argentina"
+                              country_code="ARG"
+                              abbreviation="ARG"
+                              gender="male"/>
+               </standing>
+            </standings>
+         </group>
+         <group id="sr:league:21801" name="Group B" live="false" group_name="B">
+            <stage order="1"
+                   type="league"
+                   phase="stage_1"
+                   start_date="2016-08-07"
+                   end_date="2016-08-16"
+                   year="2016"/>
+            <standings>
+               <standing rank="1"
+                         played="5"
+                         win="3"
+                         loss="1"
+                         draw="1"
+                         goals_for="77"
+                         goals_against="71"
+                         goals_diff="6"
+                         points="7"
+                         current_outcome="Playoffs"
+                         change="2">
+                  <competitor id="sr:competitor:5588"
+                              name="Germany"
+                              country="Germany"
+                              country_code="DEU"
+                              abbreviation="GER"
+                              gender="male"/>
+               </standing>
+               <standing rank="2"
+                         played="5"
+                         win="3"
+                         loss="1"
+                         draw="1"
+                         goals_for="67"
+                         goals_against="61"
+                         goals_diff="6"
+                         points="7"
+                         current_outcome="Playoffs"
+                         change="2">
+                  <competitor id="sr:competitor:5597"
+                              name="Slovenia"
+                              country="Slovenia"
+                              country_code="SVN"
+                              abbreviation="SLO"
+                              gender="male"/>
+               </standing>
+               <standing rank="3"
+                         played="5"
+                         win="3"
+                         loss="2"
+                         draw="0"
+                         goals_for="71"
+                         goals_against="72"
+                         goals_diff="-1"
+                         points="6"
+                         current_outcome="Playoffs"
+                         change="-2">
+                  <competitor id="sr:competitor:5592"
+                              name="Poland"
+                              country="Poland"
+                              country_code="POL"
+                              abbreviation="POL"
+                              gender="male"/>
+               </standing>
+               <standing rank="4"
+                         played="5"
+                         win="2"
+                         loss="2"
+                         draw="1"
+                         goals_for="72"
+                         goals_against="74"
+                         goals_diff="-2"
+                         points="5"
+                         current_outcome="Playoffs"
+                         change="-2">
+                  <competitor id="sr:competitor:6935"
+                              name="Brazil"
+                              country="Brazil"
+                              country_code="BRA"
+                              abbreviation="BRA"
+                              gender="male"/>
+               </standing>
+               <standing rank="5"
+                         played="5"
+                         win="1"
+                         loss="3"
+                         draw="1"
+                         goals_for="62"
+                         goals_against="65"
+                         goals_diff="-3"
+                         points="3"
+                         change="1">
+                  <competitor id="sr:competitor:7578"
+                              name="Sweden"
+                              country="Sweden"
+                              country_code="SWE"
+                              abbreviation="SWE"
+                              gender="male"/>
+               </standing>
+               <standing rank="6"
+                         played="5"
+                         win="1"
+                         loss="4"
+                         draw="0"
+                         goals_for="65"
+                         goals_against="71"
+                         goals_diff="-6"
+                         points="2"
+                         change="-1">
+                  <competitor id="sr:competitor:6940"
+                              name="Egypt"
+                              country="Egypt"
+                              country_code="EGY"
+                              abbreviation="EGY"
+                              gender="male"/>
+               </standing>
+            </standings>
+         </group>
+      </groups>
+   </season_standing>
+</season_standings>

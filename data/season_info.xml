@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<season_info generated_at="2025-06-08T21:13:42+00:00"
+             schemaLocation="http://schemas.sportradar.com/sportsapi/handball/v2 https://schemas.sportradar.com/sportsapi/handball/v2/schemas/season_info.xsd">
+   <season id="sr:season:32521"
+           name="Olympic Games 2016"
+           start_date="2016-08-07"
+           end_date="2016-08-22"
+           year="2016"
+           competition_id="sr:competition:439">
+      <sport id="sr:sport:6" name="Handball"/>
+      <category id="sr:category:73" name="International"/>
+      <competition id="sr:competition:439" name="Olympic Tournament" gender="men"/>
+   </season>
+   <coverage type="competition">
+      <competition_properties brackets="false"
+                              schedules="true"
+                              standings="live"
+                              team_squads="false"/>
+      <sport_event_properties basic_play_by_play="false"
+                              basic_player_stats="false"
+                              basic_team_stats="false"
+                              goal_scorers="false"
+                              lineups="false"
+                              scores="live"/>
+   </coverage>
+   <stages>
+      <stage order="1"
+             type="league"
+             phase="stage_1"
+             start_date="2016-08-07"
+             end_date="2016-08-16"
+             year="2016">
+         <groups>
+            <group id="sr:league:21799"
+                   name="Group A"
+                   max_rounds="5"
+                   group_name="A">
+               <competitors>
+                  <competitor id="sr:competitor:6946"
+                              name="Tunisia"
+                              country="Tunisia"
+                              country_code="TUN"
+                              abbreviation="TUN"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5585"
+                              name="Croatia"
+                              country="Croatia"
+                              country_code="HRV"
+                              abbreviation="CRO"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5587"
+                              name="France"
+                              country="France"
+                              country_code="FRA"
+                              abbreviation="FRA"
+                              gender="male"/>
+                  <competitor id="sr:competitor:6937"
+                              name="Argentina"
+                              country="Argentina"
+                              country_code="ARG"
+                              abbreviation="ARG"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5586"
+                              name="Denmark"
+                              country="Denmark"
+                              country_code="DNK"
+                              abbreviation="DEN"
+                              gender="male"/>
+                  <competitor id="sr:competitor:6944"
+                              name="Qatar"
+                              country="Qatar"
+                              country_code="QAT"
+                              abbreviation="QAT"
+                              gender="male"/>
+               </competitors>
+            </group>
+            <group id="sr:league:21801"
+                   name="Group B"
+                   max_rounds="5"
+                   group_name="B">
+               <competitors>
+                  <competitor id="sr:competitor:5588"
+                              name="Germany"
+                              country="Germany"
+                              country_code="DEU"
+                              abbreviation="GER"
+                              gender="male"/>
+                  <competitor id="sr:competitor:7578"
+                              name="Sweden"
+                              country="Sweden"
+                              country_code="SWE"
+                              abbreviation="SWE"
+                              gender="male"/>
+                  <competitor id="sr:competitor:6940"
+                              name="Egypt"
+                              country="Egypt"
+                              country_code="EGY"
+                              abbreviation="EGY"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5597"
+                              name="Slovenia"
+                              country="Slovenia"
+                              country_code="SVN"
+                              abbreviation="SLO"
+                              gender="male"/>
+                  <competitor id="sr:competitor:6935"
+                              name="Brazil"
+                              country="Brazil"
+                              country_code="BRA"
+                              abbreviation="BRA"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5592"
+                              name="Poland"
+                              country="Poland"
+                              country_code="POL"
+                              abbreviation="POL"
+                              gender="male"/>
+               </competitors>
+            </group>
+         </groups>
+      </stage>
+      <stage order="2"
+             type="cup"
+             phase="playoffs"
+             start_date="2016-08-17"
+             end_date="2016-08-21"
+             year="2016">
+         <groups>
+            <group id="sr:cup:63755" name="Final Round">
+               <competitors>
+                  <competitor id="sr:competitor:5585"
+                              name="Croatia"
+                              country="Croatia"
+                              country_code="HRV"
+                              abbreviation="CRO"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5586"
+                              name="Denmark"
+                              country="Denmark"
+                              country_code="DNK"
+                              abbreviation="DEN"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5587"
+                              name="France"
+                              country="France"
+                              country_code="FRA"
+                              abbreviation="FRA"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5588"
+                              name="Germany"
+                              country="Germany"
+                              country_code="DEU"
+                              abbreviation="GER"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5592"
+                              name="Poland"
+                              country="Poland"
+                              country_code="POL"
+                              abbreviation="POL"
+                              gender="male"/>
+                  <competitor id="sr:competitor:5597"
+                              name="Slovenia"
+                              country="Slovenia"
+                              country_code="SVN"
+                              abbreviation="SLO"
+                              gender="male"/>
+                  <competitor id="sr:competitor:6935"
+                              name="Brazil"
+                              country="Brazil"
+                              country_code="BRA"
+                              abbreviation="BRA"
+                              gender="male"/>
+                  <competitor id="sr:competitor:6944"
+                              name="Qatar"
+                              country="Qatar"
+                              country_code="QAT"
+                              abbreviation="QAT"
+                              gender="male"/>
+               </competitors>
+            </group>
+         </groups>
+      </stage>
+   </stages>
+</season_info>

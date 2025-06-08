@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handball_data>
+   <season>
+      <name>Olympic Games 2016</name>
+      <year>2016</year>
+      <category>International</category>
+      <gender>men</gender>
+   </season>
+   <competitors>
+      <competitor name="Croatia" country="Croatia">
+         <standings>
+            <standing group_name="Group A"
+                      group_name_code="A"
+                      rank="1"
+                      played="5"
+                      win="4"
+                      loss="1"
+                      draw="0"
+                      goals_for="147"
+                      goals_against="134"
+                      goals_diff="13"
+                      points="8"/>
+         </standings>
+      </competitor>
+      <competitor name="France" country="France">
+         <standings>
+            <standing group_name="Group A"
+                      group_name_code="A"
+                      rank="2"
+                      played="5"
+                      win="4"
+                      loss="1"
+                      draw="0"
+                      goals_for="152"
+                      goals_against="126"
+                      goals_diff="26"
+                      points="8"/>
+         </standings>
+      </competitor>
+      <competitor name="Denmark" country="Denmark">
+         <standings>
+            <standing group_name="Group A"
+                      group_name_code="A"
+                      rank="3"
+                      played="5"
+                      win="3"
+                      loss="2"
+                      draw="0"
+                      goals_for="136"
+                      goals_against="127"
+                      goals_diff="9"
+                      points="6"/>
+         </standings>
+      </competitor>
+      <competitor name="Qatar" country="Qatar">
+         <standings>
+            <standing group_name="Group A"
+                      group_name_code="A"
+                      rank="4"
+                      played="5"
+                      win="2"
+                      loss="2"
+                      draw="1"
+                      goals_for="122"
+                      goals_against="127"
+                      goals_diff="-5"
+                      points="5"/>
+         </standings>
+      </competitor>
+      <competitor name="Argentina" country="Argentina">
+         <standings>
+            <standing group_name="Group A"
+                      group_name_code="A"
+                      rank="5"
+                      played="5"
+                      win="1"
+                      loss="4"
+                      draw="0"
+                      goals_for="110"
+                      goals_against="126"
+                      goals_diff="-16"
+                      points="2"/>
+         </standings>
+      </competitor>
+      <competitor name="Tunisia" country="Tunisia">
+         <standings>
+            <standing group_name="Group A"
+                      group_name_code="A"
+                      rank="6"
+                      played="5"
+                      win="0"
+                      loss="4"
+                      draw="1"
+                      goals_for="118"
+                      goals_against="145"
+                      goals_diff="-27"
+                      points="1"/>
+         </standings>
+      </competitor>
+      <competitor name="Germany" country="Germany">
+         <standings>
+            <standing group_name="Group B"
+                      group_name_code="B"
+                      rank="1"
+                      played="5"
+                      win="4"
+                      loss="1"
+                      draw="0"
+                      goals_for="153"
+                      goals_against="141"
+                      goals_diff="12"
+                      points="8"/>
+         </standings>
+      </competitor>
+      <competitor name="Slovenia" country="Slovenia">
+         <standings>
+            <standing group_name="Group B"
+                      group_name_code="B"
+                      rank="2"
+                      played="5"
+                      win="4"
+                      loss="1"
+                      draw="0"
+                      goals_for="137"
+                      goals_against="126"
+                      goals_diff="11"
+                      points="8"/>
+         </standings>
+      </competitor>
+      <competitor name="Brazil" country="Brazil">
+         <standings>
+            <standing group_name="Group B"
+                      group_name_code="B"
+                      rank="3"
+                      played="5"
+                      win="2"
+                      loss="2"
+                      draw="1"
+                      goals_for="141"
+                      goals_against="150"
+                      goals_diff="-9"
+                      points="5"/>
+         </standings>
+      </competitor>
+      <competitor name="Poland" country="Poland">
+         <standings>
+            <standing group_name="Group B"
+                      group_name_code="B"
+                      rank="4"
+                      played="5"
+                      win="2"
+                      loss="3"
+                      draw="0"
+                      goals_for="139"
+                      goals_against="140"
+                      goals_diff="-1"
+                      points="4"/>
+         </standings>
+      </competitor>
+      <competitor name="Egypt" country="Egypt">
+         <standings>
+            <standing group_name="Group B"
+                      group_name_code="B"
+                      rank="5"
+                      played="5"
+                      win="1"
+                      loss="3"
+                      draw="1"
+                      goals_for="129"
+                      goals_against="143"
+                      goals_diff="-14"
+                      points="3"/>
+         </standings>
+      </competitor>
+      <competitor name="Sweden" country="Sweden">
+         <standings>
+            <standing group_name="Group B"
+                      group_name_code="B"
+                      rank="6"
+                      played="5"
+                      win="1"
+                      loss="4"
+                      draw="0"
+                      goals_for="132"
+                      goals_against="131"
+                      goals_diff="1"
+                      points="2"/>
+         </standings>
+      </competitor>
+   </competitors>
+</handball_data>
