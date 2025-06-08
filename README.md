@@ -28,7 +28,7 @@
 
 1. Definir la SportRadar API Key como variable de entorno:
 ```bash
-export SPORTRADAR_API="<api-key-generada>"
+export SPORTRADAR_API='<api-key-generada>'
 ```
 
 2. Convertir el script en un ejecutable:
