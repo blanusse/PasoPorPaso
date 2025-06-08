@@ -15,6 +15,8 @@ if [ -z "$SPORTRADAR_API" ]; then
     exit 1
 fi
 
+
+#Chequea que este instalado en la misma carpeta Apache
 if ! command -v fop >/dev/null 2>&1; then
   echo '<handball_data>
         <error> Apache not installed </error>
@@ -22,8 +24,7 @@ if ! command -v fop >/dev/null 2>&1; then
     exit 1
 fi
 
-
-
+echo "Input and API-KEY checked"
 
 PREFIX="$1"
 
@@ -44,9 +45,10 @@ API_BASE="https://api.sportradar.com/handball/trial/v2/en/seasons.xml"
 
 # Get seasons list
 curl -s -X GET ${API_BASE} --header 'accept:application/json' --header "x-api-key: ${SPORTRADAR_API}" -o data/seasons_list.xml
+
 java -cp ../saxon9he.jar net.sf.saxon.Transform -s:data/seasons_list.xml -xsl:remove_namespace.xsl -o:data/seasons_list.xml
 
-#Chequea si el archivo seasons/list.xml esta vacio o no se creo
+#Chequea si el archivo seasons_list.xml esta vacio o no se creo
 if [ ! -s data/seasons_list.xml ]; then
     echo "Error: Failed to fetch seasons list"
     exit 1
@@ -60,7 +62,6 @@ SEASON_ID2=$(java -cp ../saxon9he.jar net.sf.saxon.Query \
   -s:data/seasons_list.xml \
   prefix="$PREFIX"\
   )
-
 SEASON_ID=$(echo $SEASON_ID2 | sed 's/^.*?>//')
 
 
@@ -70,6 +71,9 @@ if [ -z "$SEASON_ID" ]; then
     echo "Error: No season found with prefix '${PREFIX}'"
     exit 1
 fi
+
+echo "Season id found: ${SEASON_ID}"
+
 
 
 #############################################################################################
@@ -94,6 +98,9 @@ if [ ! -s data/season_info.xml ]; then
     echo "Error: Failed to fetch season info"
     exit 1
 fi
+
+echo "season_standings.xml and season_info.xml fetched"
+
 
 #############################################################################################
 
@@ -124,5 +131,8 @@ if [ ! -s handball_report.pdf ]; then
     head -n 20 data/handball_page.fo
     exit 1
 fi
+
+#Borra el archivo .fo que crea el PDF
+rm -f ./handball_page.fo
 
 echo "Success! Generated handball_report.pdf"

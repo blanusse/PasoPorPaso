@@ -1,58 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="handball_data" type="resultT"/>
-    <xsd:complexType name="resultT">
-        <xsd:choice>
-            <xsd:sequence>
-                <xsd:element name="season">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="name" type="xsd:string"/>
-                            <xsd:element name="year" type="xsd:string"/>
-                            <xsd:element name="category" type="xsd:string"/>
-                            <xsd:element name="gender" type="xsd:string"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="competitors">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="competitor" type="competitorT" minOccurs="0" maxOccurs="unbounded"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:sequence>
-        </xsd:choice>
-    </xsd:complexType>
-    <xsd:element name="error" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
-    <xsd:complexType name="competitorT">
-        <xsd:sequence>
-            <xsd:element name="standings">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="standing" type="standingT" minOccurs="0" maxOccurs="unbounded"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
-        </xsd:sequence>
-        <xsd:attribute name="name" type="xsd:string"/>
-        <xsd:attribute name="country" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="standingT">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute name="group_name_code" type="xsd:string"/>
-                <xsd:attribute name="group_name" type="xsd:string"/>
-                <xsd:attribute name="rank" type="xsd:string"/>
-                <xsd:attribute name="played" type="xsd:string"/>
-                <xsd:attribute name="win" type="xsd:string"/>
-                <xsd:attribute name="loss" type="xsd:string"/>
-                <xsd:attribute name="draw" type="xsd:string"/>
-                <xsd:attribute name="goals_for" type="xsd:string"/>
-                <xsd:attribute name="goals_against" type="xsd:string"/>
-                <xsd:attribute name="goals_diff" type="xsd:string"/>
-                <xsd:attribute name="points" type="xsd:string"/>
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
-</xsd:schema>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">-->
+<!--    <xsd:element name="handball_data" type="resultT"/>-->
+<!--    <xsd:complexType name="resultT">-->
+<!--        <xsd:choice>-->
+<!--            <xsd:sequence>-->
+<!--                <xsd:element name="season">-->
+<!--                    <xsd:complexType>-->
+<!--                        <xsd:sequence>-->
+<!--                            <xsd:element name="name" type="xsd:string"/>-->
+<!--                            <xsd:element name="year" type="xsd:string"/>-->
+<!--                            <xsd:element name="category" type="xsd:string"/>-->
+<!--                            <xsd:element name="gender" type="xsd:string"/>-->
+<!--                        </xsd:sequence>-->
+<!--                    </xsd:complexType>-->
+<!--                </xsd:element>-->
+<!--                <xsd:element name="competitors">-->
+<!--                    <xsd:complexType>-->
+<!--                        <xsd:sequence>-->
+<!--                            <xsd:element name="competitor" type="competitorT" minOccurs="0" maxOccurs="unbounded"/>-->
+<!--                        </xsd:sequence>-->
+<!--                    </xsd:complexType>-->
+<!--                </xsd:element>-->
+<!--            </xsd:sequence>-->
+<!--        </xsd:choice>-->
+<!--    </xsd:complexType>-->
+<!--    <xsd:element name="error" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>-->
+<!--    <xsd:complexType name="competitorT">-->
+<!--        <xsd:sequence>-->
+<!--            <xsd:element name="standings">-->
+<!--                <xsd:complexType>-->
+<!--                    <xsd:sequence>-->
+<!--                        <xsd:element name="standing" type="standingT" minOccurs="0" maxOccurs="unbounded"/>-->
+<!--                    </xsd:sequence>-->
+<!--                </xsd:complexType>-->
+<!--            </xsd:element>-->
+<!--        </xsd:sequence>-->
+<!--        <xsd:attribute name="name" type="xsd:string"/>-->
+<!--        <xsd:attribute name="country" type="xsd:string"/>-->
+<!--    </xsd:complexType>-->
+<!--    <xsd:complexType name="standingT">-->
+<!--        <xsd:simpleContent>-->
+<!--            <xsd:extension base="xsd:string">-->
+<!--                <xsd:attribute name="group_name_code" type="xsd:string"/>-->
+<!--                <xsd:attribute name="group_name" type="xsd:string"/>-->
+<!--                <xsd:attribute name="rank" type="xsd:string"/>-->
+<!--                <xsd:attribute name="played" type="xsd:string"/>-->
+<!--                <xsd:attribute name="win" type="xsd:string"/>-->
+<!--                <xsd:attribute name="loss" type="xsd:string"/>-->
+<!--                <xsd:attribute name="draw" type="xsd:string"/>-->
+<!--                <xsd:attribute name="goals_for" type="xsd:string"/>-->
+<!--                <xsd:attribute name="goals_against" type="xsd:string"/>-->
+<!--                <xsd:attribute name="goals_diff" type="xsd:string"/>-->
+<!--                <xsd:attribute name="points" type="xsd:string"/>-->
+<!--            </xsd:extension>-->
+<!--        </xsd:simpleContent>-->
+<!--    </xsd:complexType>-->
+<!--</xsd:schema>-->
