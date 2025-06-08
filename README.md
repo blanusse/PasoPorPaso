@@ -14,7 +14,6 @@
 - `season_info.xml`: XML con información de una temporada específica
 - `season_standings.xml`: XML con datos sobre las posiciones de una temporada específica
 - `handball_data.xml`: XML con datos procesados en formato específico
-- `handball_page.fo`: XSL-FO con el formato especificado para el reporte 
 - `handball_report.pdf`: PDF con los datos soliciatos para el reporte
 
 ## Pre-requisitos para ejecutar
