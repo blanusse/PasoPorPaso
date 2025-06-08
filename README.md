@@ -43,7 +43,7 @@ Ejecutar el script con un parámetro _prefix_ para obtener información de una t
 ```bash
 ./tpe.sh "<prefix>"
 ```
-Reemplazando <prefix> por el prefijo de la liga deseada
+Reemplazando "prefix" por el prefijo de la liga deseada
 
 <u>Se realizarán las siguientes tareas:</u>
 1. Buscar y obtener la lista de temporadas de la API SportRadar
