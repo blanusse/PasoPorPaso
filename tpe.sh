@@ -1,63 +1,64 @@
 #!/bin/bash
 
-#Manejo de errores
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <prefix>"
-    echo "Example: $0 \"Champions\""
-    exit 1
-fi
-
-#Manejo de errores
-if [ -z "$SPORTRADAR_API" ]; then
-    echo "Error: SPORTRADAR_API environment variable is not set"
-    echo "Please set it first:"
-    echo "export SPORTRADAR_API='your-api-key-here'"
-    exit 1
-fi
+#Modulo para que cuando encuentra un error cree el PDF y el xml con el error
+mostrar_error() {
+  java net.sf.saxon.Transform -s:handball_data.xml -xsl:remove_namespace.xsl -o:handball_data.xml
+             java net.sf.saxon.Transform \
+               -s:handball_data.xml \
+               -xsl:generate_fo_errors.xsl \
+               -o:handball_page_errors.fo
+             fop -fo handball_page_errors.fo -pdf handball_report.pdf 2>/dev/null
+            rm -f ./handball_page_errors.fo
+            exit 1
+}
 
 
-#Manejo de errores
+#Si apache no esta instalado tira el error por entrada estandar, pues no se puede hacer el PDF
 if ! command -v fop >/dev/null 2>&1; then
   echo '<handball_data>
         <error> Apache not installed </error>
     </handball_data>' > handball_data.xml
-    exit 1
+    cat handball_data.xml
 fi
 
-echo "Input and API-KEY checked"
+#Si no esta seteada la API_KEY, se aborta
+if [ -z "$SPORTRADAR_API" ]; then
+    echo '<handball_data>
+            <error>SPORTRADAR_API environment variable is not set  </error>
+        </handball_data>' > handball_data.xml
+        mostrar_error
+fi
 
+#Si el numero de argumentos recibidos es distinto de uno o es vacio se aborta
+if [ $# -ne 1 ] || [ "$1" == "" ]; then
+   echo '<handball_data>
+       <error> Invalid prefix amount </error>
+   </handball_data>' > handball_data.xml
+   mostrar_error
+ fi
+
+echo "Input checked"
 PREFIX="$1"
 
-
-#Manejo de errores
-
-if [ "$PREFIX" == "" ]; then
-  echo '<handball_data>
-      <error> Prefix must not be empty </error>
-  </handball_data>' > handball_data.xml
-  exit 1
-
-fi
-
-
-
-# Create data directory if it doesn't exist
+# Crea un directorio para guardar archivos de la API
 mkdir -p data
 
-# API Base URL - using v2 production endpoint
+
 API_BASE="https://api.sportradar.com/handball/trial/v2/en/seasons.xml"
 
-# Get seasons list
 curl -s -X GET ${API_BASE} --header 'accept:application/json' --header "x-api-key: ${SPORTRADAR_API}" -o data/seasons_list.xml
 
 
-java net.sf.saxon.Transform -s:data/seasons_list.xml -xsl:remove_namespace.xsl -o:data/seasons_list.xml
-#
-#Chequea si el archivo seasons_list.xml esta vacio o no se creo
-if [ ! -s data/seasons_list.xml ]; then
-    echo "Error: Failed to fetch seasons list"
-    exit 1
+#Si la API_KEY no tiene mas usos aborta
+if  grep -q "{\"message\":\"Limit Exceeded\"}" data/season_standings.xml; then
+  echo '<handball_data>
+         <error> Invalid API Key </error>
+     </handball_data>' > handball_data.xml
+     mostrar_error
 fi
+
+java net.sf.saxon.Transform -s:data/seasons_list.xml -xsl:remove_namespace.xsl -o:data/seasons_list.xml
+
 
 
 
@@ -68,13 +69,15 @@ SEASON_ID2=$(java net.sf.saxon.Query \
   )
 SEASON_ID=$(echo $SEASON_ID2 | sed 's/^.*?>//')
 
-
-
-
+#Si el prefix no es una season valida, aborta
 if [ -z "$SEASON_ID" ]; then
-    echo "Error: No season found with prefix '${PREFIX}'"
-    exit 1
+  echo '<handball_data>
+          <error> No season found with prefix: '${PREFIX}' </error>
+      </handball_data>' > handball_data.xml
+    mostrar_error
 fi
+
+
 
 echo "Season id found: ${SEASON_ID}"
 
@@ -88,20 +91,22 @@ curl -s -X GET https://api.sportradar.com/handball/trial/v2/en/seasons/${SEASON_
 data/season_standings.xml
 java net.sf.saxon.Transform -s:data/season_standings.xml -xsl:remove_namespace.xsl -o:data/season_standings.xml
 
-if [ ! -s data/season_standings.xml ]; then
-    echo "Error: Failed to fetch season standings"
-    exit 1
-fi
 
  curl -s -X GET https://api.sportradar.com/handball/trial/v2/en/seasons/${SEASON_ID}/info.xml \
  --header 'accept: application/json' --header "x-api-key: ${SPORTRADAR_API}" -o \
  data/season_info.xml
 java net.sf.saxon.Transform -s:data/season_info.xml -xsl:remove_namespace.xsl -o:data/season_info.xml
 
-if [ ! -s data/season_info.xml ]; then
-    echo "Error: Failed to fetch season info"
-    exit 1
+#Si la API incluye a la season pero solo tiene datos de los participantes, y no tiene de los puntajes
+if ! grep -q "<groups>" data/season_standings.xml; then
+  echo '<handball_data>
+         <error> API doesnt contains prefix data </error>
+     </handball_data>' > handball_data.xml
+     mostrar_error
 fi
+
+
+
 
 echo "season_standings.xml and season_info.xml fetched"
 
@@ -115,10 +120,7 @@ HANDBALL_DATA=$(java net.sf.saxon.Query \
 echo "$HANDBALL_DATA" > handball_data.xml
 java net.sf.saxon.Transform -s:handball_data.xml -xsl:remove_namespace.xsl -o:handball_data.xml
 
-if [ ! -s handball_data.xml ]; then
-    echo "Error: Failed to create handball data"
-    exit 1
-fi
+
 
 
 java net.sf.saxon.Transform \
@@ -129,13 +131,7 @@ java net.sf.saxon.Transform \
 
 fop -fo handball_page.fo -pdf handball_report.pdf 2>/dev/null
 
-#Manejo de errores
-if [ ! -s handball_report.pdf ]; then
-    echo "Error: Failed to generate PDF. Check data/fop.log for details"
-    echo "FO file preview:"
-    head -n 20 data/handball_page.fo
-    exit 1
-fi
+
 
 #Borra el archivo .fo que crea el PDF
 rm -f ./handball_page.fo
