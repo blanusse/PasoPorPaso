@@ -18,10 +18,15 @@
 
             <fo:page-sequence master-reference="A4">
                 <fo:flow flow-name="xsl-region-body">
-                    <fo:block text-align="center" font-size="14pt" font-family="sans-serif" color="black"
-                              space-before="1cm">
-                        <xsl:value-of select="error"/>
-                    </fo:block>
+                    <xsl:for-each select="error">
+                        <fo:block text-align="center"
+                                  font-size="14pt"
+                                  font-family="sans-serif"
+                                  color="black"
+                                  space-before="1cm">
+                            <xsl:value-of select="."/>
+                        </fo:block>
+                    </xsl:for-each>
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>

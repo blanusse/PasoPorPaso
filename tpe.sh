@@ -32,10 +32,10 @@ fi
 
 #Si el numero de argumentos recibidos es distinto de uno o es vacio se aborta
 if [ $# -ne 1 ] || [ "$1" == "" ]; then
-   echo '<handball_data>
-       <error> Invalid prefix amount </error>
-       <error> Example: ./tpe.sh "prefix" </error>
-   </handball_data>' > handball_data.xml
+   echo "<handball_data>
+        <error> Invalid prefix amount </error>
+        <error> Example: ./tpe.sh \"prefix\" </error>
+   </handball_data>" > handball_data.xml
    mostrar_error
  fi
 
